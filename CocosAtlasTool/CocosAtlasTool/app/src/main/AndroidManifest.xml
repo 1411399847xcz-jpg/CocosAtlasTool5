@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CocosAtlasTool 应用清单文件 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 网络访问权限，用于加载网络资源 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".AtlasToolApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CocosAtlasTool"
+        android:requestLegacyExternalStorage="true">
+
+        <!-- 主 Activity，单 Activity 架构承载 Compose 界面 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.CocosAtlasTool">
+            <intent-filter>
+                <!-- 启动入口 -->
+                <action android:name="android.intent.action.MAIN" />
+                <!-- 在桌面显示图标 -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
